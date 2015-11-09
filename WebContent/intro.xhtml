@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Intro</title>
+</h:head>
+<h:body>
+	<h3>JavaMail Application</h3>
+	<h:form>
+		<p:panelGrid style="margin-top:20px">
+			<f:facet name="header">
+				<p:row>
+					<p:column colspan="2">Login</p:column>
+				</p:row>
+			</f:facet>
+
+			<p:row>
+				<p:column style="font-weight: bold;">Username</p:column>
+				<p:column style="font-weight: bold;">
+					<p:inputText id="username" value="#{loginManagedBean.username}" />
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column style="font-weight: bold;">Password</p:column>
+				<p:column style="font-weight: bold;">
+					<p:password id="password" value="#{loginManagedBean.password}"
+						required="true" />
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column colspan="2">
+					<p:commandButton id="login" value="Login"
+						actionListener="#{loginBackingBean.loginAction}" action="test" ajax="false">
+					</p:commandButton>
+				</p:column>
+			</p:row>
+		</p:panelGrid>
+	</h:form>
+</h:body>
+</html>
